@@ -1,0 +1,45 @@
+<!-- If Statement Example -->
+<!-- --------------------------------------------------------- -->
+@if (player) {
+<app-player [player]="player"></app-player>
+} @else {
+<p>No player exists at this time</p>
+}
+
+<!-- Switch Statement Example -->
+<!-- --------------------------------------------------------- -->
+<label>
+  <span>Choose a Player</span>
+  <select [formControl]="options" name="options">
+    <option *ngFor="let choice of optionChoices" [value]="choice">
+      {{ choice }}
+    </option>
+  </select>
+</label>
+
+@switch (options.value) { @case ('LeBron') {
+<app-player [player]="player1"></app-player>
+} @case ('Kareem') {
+<app-player [player]="player2"></app-player>
+} @default {
+<app-player [player]="player3"></app-player>
+} }
+
+<!-- For Loop Example -->
+<!-- --------------------------------------------------------- -->
+@for (player of players; track player.name; let index = $index; let first =
+$first; let last = $last; let even = $even; let odd = $odd; let count = $count)
+{ @if (first) {
+<strong>There are {{ count }} players in the list</strong>
+}
+<app-player
+  [player]="player"
+  [index]="index"
+  [class.even]="even"
+  [class.first]="first"
+  [class.last]="last"
+>
+</app-player>
+} @empty {
+<p>There are no players to display at this time</p>
+}

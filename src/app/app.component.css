@@ -1,0 +1,38 @@
+:host {
+  display: block;
+  padding: 1.5em;
+}
+
+label,
+span {
+  display: block;
+}
+
+label,
+strong {
+  border: solid 1px #ccc;
+  border-radius: 0.25em;
+  margin-bottom: 0.25em;
+  padding: 0.75em 1em 1em;
+}
+
+span {
+  margin-bottom: 0.375em;
+}
+
+select,
+option {
+  color: #666;
+  font-size: 125%;
+}
+
+select {
+  border: solid 1px #ccc;
+  width: 50%;
+}
+
+strong {
+  display: block;
+  padding-top: 1em;
+  text-align: center;
+}

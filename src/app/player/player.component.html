@@ -1,0 +1,41 @@
+<img [ngSrc]="'/assets/' + player.imageName + '.avif'" width="1040" height="760" />
+<h2>
+  @if (index > -1) {
+    {{ index + 1 }}.
+  }
+  {{ player.name }}
+</h2>
+<dl>
+  <div>
+    <dt>
+      GP
+    </dt>
+    <dd>
+      {{ player.games | number }}
+    </dd>
+  </div>
+  <div>
+    <dt>
+      PTS
+    </dt>
+    <dd>
+      {{ player.points | number }}
+    </dd>
+  </div>
+  <div>
+    <dt>
+      FG%
+    </dt>
+    <dd>
+      {{ player.fieldGoalPercentage | percent:'.1' }}
+    </dd>
+  </div>
+  <div>
+    <dt>
+      3P%
+    </dt>
+    <dd>
+      {{ player.threePointPercentage | percent:'.1' }}
+    </dd>
+  </div>
+</dl>
